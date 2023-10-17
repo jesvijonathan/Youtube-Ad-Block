@@ -1,5 +1,4 @@
 console.log("Youtube Ad Block Plugin Active");
-// onload and on refresh or move to another video
 
 const total_tries = 10;
 function adblock() {

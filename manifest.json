@@ -1,24 +1,35 @@
 {
   "manifest_version": 3,
-  "name": "Youtube Ad Block",
-  "version": "0.4.0",
+  "name": "Youtube Ad Blocker (Updated)",
+  "version": "1.0",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "16": "/icons/icon.png",
+    "32": "/icons/icon.png",
+    "48": "/icons/icon.png",
+    "128": "/icons/icon.png"
+  },
+
   "action": {
     "default_popup": "popup.html"
   },
-  "description": "A plugin to deal with Youtube Ads",
-  "icons": {
-    "32": "/icons/icon32.png"
-  },
+  "description": "A plugin to deal with Youtube Ads after the new update banning Ad Blockers",
 
   "author": "jesvi22j@gmail.com",
-  "devtools_page": "devtools.html",
-  "homepage_url": "https://path/to/homepage",
   "options_page": "./options.html",
-  "short_name": "Kavachi",
+  "homepage_url": "https://github.com/jesvijonathan/Youtube-Ad-Block",
+  "short_name": "Youtube Ad Blocker (Updated)",
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["Content.js"]
+      "js": ["Content.js"],
+      "run_at": "document_start"
     }
   ]
 }

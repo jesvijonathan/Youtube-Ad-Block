@@ -4,82 +4,38 @@
   <body>
     <div>
       <div class="title">
-        <h1 class="title_tog">Youtube Ad Block</h1>
         <!-- <img class="logo" src="./icons/icon32.png" /> -->
       </div>
       <div>
         <div class="options_cont">
-          <div class="options_cont_interior_main">
-            <label for="toggle1">Active</label>
-            <label class="switch" for="toggle1">
-              <div>
-                <input type="checkbox" id="toggle1" name="toggle1" checked />
-                <span class="slider round"></span>
-              </div>
-            </label>
-          </div>
-
-          <br />
           <div class="options">
-            <div style="margin-bottom: 16px">Options :</div>
-            <div class="options_cont_interior">
-              <input
-                disabled
-                type="checkbox"
-                id="toggle2"
-                name="toggle2"
-                checked
-              />
-              <label for="toggle2">Replace content</label>
-            </div>
-            <div class="options_cont_interior">
-              <input
-                disabled
-                type="checkbox"
-                id="toggle3"
-                name="toggle3"
-                checked
-              />
-              <label for="toggle3">Video/Image filtering</label>
-            </div>
-            <div class="options_cont_interior">
-              <input disabled type="checkbox" id="toggle3" name="toggle3" />
-              <label for="toggle3">Audio filtering</label>
-            </div>
+            <div class="cent_load">
+              <div
+                style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                "
+              >
+                <img class="logo" src="./icons/icon.png" />
+                <h1 class="title_tog">Ad Blocker</h1>
+              </div>
 
-            <div class="options_cont_interior">
-              <input disabled type="checkbox" id="toggle3" name="toggle3" />
-              <label for="toggle3">Context filtering</label>
-            </div>
-            <div class="options_cont_interior">
-              <input
-                disabled
-                type="checkbox"
-                id="toggle3"
-                name="toggle3"
-                checked
-              />
-              <label for="toggle3">Detect on all website</label>
+              <!-- add or remove inner text to pause unpause -->
+              <button
+                onclick="if(this.innerHTML=='Pause'){this.innerHTML = 'Resume'}else{this.innerHTML = 'Pause'}"
+                class="unpa"
+              >
+                Unpause
+              </button>
+              <br />
             </div>
           </div>
           <div class="footer">
             <div class="footer_con2">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 515 587"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M484.52 99.96C374.233 99.96 276.333 16.9707 275.373 16.1267L257.696 0.965332L240.003 16.096C239.013 16.9397 140.357 99.9507 30.9225 99.9507L0.843872 99.6069V283.14C1.94803 366.671 55.7186 537.367 251.284 584.647L257.659 586.199L264.034 584.647C459.554 537.376 513.354 366.354 514.5 282.527L514.506 99.6069L484.52 99.96ZM460.291 282.2C460.254 284.299 454.515 477.227 259.931 529.773C259.186 529.976 258.42 530.075 257.649 530.075C256.884 530.075 256.113 529.976 255.368 529.773C61.2748 477.456 55.2081 290.773 55.0348 282.84L55.04 161.043C55.04 156.584 58.3837 152.845 62.8108 152.345C146.117 142.975 217.464 99.6621 252.571 74.6781C255.612 72.5219 259.68 72.5115 262.722 74.6781C297.805 99.6621 369.097 142.981 452.509 152.366C456.936 152.861 460.279 156.606 460.279 161.064L460.274 282.2H460.291Z"
-                  fill="white"
-                />
-                <path
-                  d="M72.5466 168.76V282.661C72.6925 289.838 78.3174 462.461 257.653 512.248C436.973 462.331 442.76 283.835 442.8 282.035L442.795 168.784C362.68 157.794 294.461 118.003 257.648 92.4973C220.815 118.003 152.555 157.779 72.5547 168.763L72.5466 168.76Z"
-                  fill="white"
-                />
-              </svg>
+              <div class="opt">
+                <input type="checkbox" id="toggle1" name="toggle1" checked />
+              </div>
             </div>
             <div class="footer_con">
               <div class="opt">
@@ -157,6 +113,28 @@
 </html>
 
 <style>
+  .cent_load {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .unpa {
+    background-color: #3b3b3b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  .unpa:hover {
+    background-color: #a3a3a3;
+    color: black;
+  }
   .footer_con2 {
     margin: 4vw;
   }
@@ -218,7 +196,6 @@
   }
 
   .logo {
-    width: 50px;
     height: 50px;
   }
   .title_tog {
@@ -227,7 +204,10 @@
     flex-wrap: nowrap;
     align-content: center;
     justify-content: center;
+    font-size: 30px;
     align-items: center;
+    width: 100%;
+    margin-left: 30px;
   }
 
   /* The switch - the box around the slider */
